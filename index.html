@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Assignment - TODO APP</title>
+	</head>
+	<body>
+		<h1 class="main-header">Drag&Drop 계획표</h1>
+		<div class="drag-container">
+			<ul class="drag-list">
+				<!-- 한 일 -->
+				<li class="drag-column done-column">
+					<span class="column-header"><h1>한 일</h1></span>
+					<!-- content -->
+					<div class="scroll-custom" id="done-content">
+						<!-- drag & drop -->
+						<ul
+							class="drag-content-list"
+							id="done-list"
+							ondrop="drop(event)"
+							ondragenter="dragEnter(0)"
+							ondragover="allowDrop(event)"
+						></ul>
+					</div>
+					<!-- Add button -->
+					<div class="add-save-button">
+						<div class="add-button" onclick="showAddForm(0)">추가</div>
+						<div class="add-button solid" onclick="hideAddForm(0)">
+							저장하기
+						</div>
+					</div>
+					<!-- add form -->
+					<div class="add-form">
+						<div class="add-form-input" contenteditable="true"></div>
+					</div>
+				</li>
+
+				<!-- 하는 중 -->
+				<li class="drag-column doing-column">
+					<span class="column-header"><h1>하는 중</h1></span>
+					<!-- content -->
+					<div class="scroll-custom" id="doing-content">
+						<!-- drag & drop -->
+						<ul
+							class="drag-content-list"
+							id="doing-list"
+							ondrop="drop(event)"
+							ondragenter="dragEnter(1)"
+							ondragover="allowDrop(event)"
+						></ul>
+					</div>
+					<!-- Add button -->
+					<div class="add-save-button">
+						<div class="add-button" onclick="showAddForm(1)">추가</div>
+						<div class="add-button solid" onclick="hideAddForm(1)">
+							저장하기
+						</div>
+					</div>
+					<!-- add form -->
+					<div class="add-form">
+						<div class="add-form-input" contenteditable="true"></div>
+					</div>
+				</li>
+
+				<!-- 할 일 -->
+				<li class="drag-column todo-column">
+					<span class="column-header"><h1>할것들</h1></span>
+					<!-- content -->
+					<div class="scroll-custom" id="todo-content">
+						<!-- drag & drop -->
+						<ul
+							class="drag-content-list"
+							id="todo-list"
+							ondrop="drop(event)"
+							ondragenter="dragEnter(2)"
+							ondragover="allowDrop(event)"
+						></ul>
+					</div>
+					<!-- Add button -->
+					<div class="add-save-button">
+						<div class="add-button" onclick="showAddForm(2)">추가</div>
+						<div class="add-button solid" onclick="hideAddForm(2)">
+							저장하기
+						</div>
+					</div>
+					<!-- add form -->
+					<div class="add-form">
+						<div class="add-form-input" contenteditable="true"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

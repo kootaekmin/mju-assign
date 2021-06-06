@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: Nanum Gothic, sans-serif;
+	background: linear-gradient(to right, #1f3a46, #13333d, #072f41);
+	color: white;
+}
+
+.main-header {
+	text-align: center;
+	font-size: 5rem;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.drag-list {
+	display: flex;
+}
+
+.drag-column {
+	flex: 1;
+	margin: 0 13px;
+	position: relative;
+	background-color: rgba(86, 151, 182, 0.295);
+	border-radius: 15px;
+}
+
+/* scroll bar */
+
+/*  */
+.column-header {
+	display: flex;
+	justify-content: center;
+	background-color: rgba(86, 152, 182, 0.219);
+	margin-bottom: 20px;
+	border-radius: 15px 15px 0 0;
+}
+
+.column-header h1 {
+	font-size: 1.5rem;
+}
+
+/* Drag and Drop */
+.drag-content-list {
+	min-height: 50px;
+}
+
+.drag-list {
+	margin: 10px;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.671);
+	color: black;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.drag-list:focus {
+	transform: scale(1.1);
+	background-color: wheat;
+}
+
+/* Button */
+.add-save-button {
+	display: flex;
+	justify-content: space-around;
+}
+
+.add-button {
+	margin: 5px 0px 10px 0px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.096);
+	padding: 5px 15px;
+	background-color: rgb(54, 96, 134);
+	color: rgb(255, 255, 255);
+}
+
+.add-button:hover {
+	filter: brightness(150%);
+	transform: scale(1.1);
+	font-weight: 600;
+}
+
+.add-button:active {
+	transform: scale(0.9);
+}
+
+.solid {
+	display: none;
+}
+
+.solid:hover {
+	filter: brightness(150%);
+}
+
+/* add input form  */
+.add-form {
+	margin: 10px;
+	border-radius: 15px;
+	background-color: whitesmoke;
+	min-height: 80px;
+	display: none;
+}
+
+.add-form-input {
+	width: 100%;
+	height: auto;
+	min-height: 80px;
+	margin: 3px;
+	padding: 3px;
+	border: 1px solid rgba(155, 55, 55, 0.603);
+	border-radius: 15px;
+	color: black;
+}
