@@ -3,7 +3,9 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "script.js",
-	"scripts": {},
+	"scripts": {
+		"build": "npm run build"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/kootaekmin/mju-assign.git"
